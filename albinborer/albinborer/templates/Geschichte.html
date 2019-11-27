@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	absolut zuverlässig seit 1932
+</span>
+
+<section>
+	<div class="banner">
+		<div class="current-year">
+			<p>2019</p>
+		</div>
+		{% static_placeholder 'banner-image for Geschichte' %}
+	</div>
+	<div class="growth-list p-0-15 mt-3">
+		<h4>Erweiterung Fuhrpark neue Teermaschine in Überbreite</h4>
+		{% static_placeholder 'Growth List' %}
+	</div>
+</section>
+{% endblock content %}

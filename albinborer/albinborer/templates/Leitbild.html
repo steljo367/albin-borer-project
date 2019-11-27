@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<section>
+	<div class="content-section p-0-15 mt-3">
+		{% static_placeholder 'Leitbild Content' %}
+	</div>
+</section>
+{% endblock content %}

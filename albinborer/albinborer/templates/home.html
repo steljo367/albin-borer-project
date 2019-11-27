@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+<!DOCTYPE html>
+
+{% block content %}
+<section class="mt-0">
+	<!--BANNER-->
+	<div class="home-banner text-center">
+		<div class="banner-image">
+			<div class="banner-logo w-100 text-left">
+				<div class="logo-text">
+					{% static_placeholder 'logo' %}
+					<span>AB</span>
+				</div>
+				<div class="wrapper">
+					<div class="css-typing">
+						<h1>
+							<a href="" class="typewrite" data-period="3000" data-type='[ "immer ein Hit" ]'>
+								<span class="wrap"></span>
+							</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--BANNER-->
+
+	<!--HOME-PAGE-CONTENT-->
+	<div class="home-page-content p-0-15 p-t-35">
+		<div class="content">
+			{% static_placeholder 'Home content' %}
+		</div>
+	</div>
+	<!--HOME-PAGE-CONTENT-->
+
+	<!--BLOG-SECTION-->
+	<div class="blog-section p-0-15 p-t-35">
+		<div class="blog-content">
+			<h2 class="news-title">wissen was abgeht</h2>
+		</div>
+		<div class="home-blog-post">
+			<div class="post">
+				<h4>
+					<span class="date d-block pb-2 font-weight-bold">August 2019</span>
+					<span class="sub-title d-block font-weight-bold">Subtitle</span>
+				</h4>
+				<p class="mb-0">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+				</p>
+				<i class="fa fa-clock-o" aria-hidden="true"></i>
+				<span class="time font-italic">2m ago</span>
+			</div>
+
+			<div class="to-news post">
+				<h4 class="m-0">
+					<a href="#" class="date d-block pb-2 font-weight-bold">alle news</a>
+				</h4>
+			</div>
+		</div>
+	</div>
+	<!--BLOG-SECTION-->
+</section>
+{% endblock content %}

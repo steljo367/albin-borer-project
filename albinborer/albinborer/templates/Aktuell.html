@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	wissen was abgeht
+</span>
+<section>
+	<div class="kontakt-section mt-5">
+		<h2 class="news-title">wissen was abgeht</h2>
+	</div>
+	<!--BLOG-SECTION-->
+	<div class="blog-section p-0-15">
+		<div class="home-blog-post">
+			<div class="current-year m-0">
+				August 2019
+			</div>
+			<div class="post content-post">
+				<h5 class="news-sub-title">Beispiel für einen Aktuellbeitrag ohne Foto</h5>
+				<div class="news-desc">
+					<h1>Cras vitae mattis lacus. Integer sit amet.</h1>
+					Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis eloquentiam
+				</div>
+				<div class="post-bottom">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="time font-italic">11/11/19 gepostet von admin</span>
+				</div>
+			</div>
+			<div class="post img-post p-0">
+				<img id="nav-icon" class="w-100" src="{% static 'images/Strassenbauer-EFZ.png' %}" alt="" />
+				<h5 class="news-sub-title">Beispiel für einen Aktuellbeitrag ohne Foto</h5>
+				<div class="post-bottom">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="time font-italic">11/11/19 gepostet von admin</span>
+				</div>
+			</div>
+			<div class="post content-post">
+				<h5 class="news-sub-title">Subtitle</h5>
+				<div class="news-desc">
+					Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis eloquentiam
+				</div>
+				<div class="post-bottom">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="time font-italic">11/11/19 gepostet von admin</span>
+				</div>
+			</div>
+			<div class="post content-post">
+				<h5 class="news-sub-title">Subtitle</h5>
+				<div class="news-desc">
+					Lorem ipsum dolor sit amet, in eam odio amet, vix id nullam detracto, vidit vituperatoribus duo id. Affert detraxit voluptatum vis eu, inermis eloquentiam
+				</div>
+				<div class="post-bottom">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="time font-italic">11/11/19 gepostet von admin</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--BLOG-SECTION-->
+</section>
+{% endblock content %}

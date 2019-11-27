@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	einfach abschicken
+</span>
+<section>
+	<div class="kontakt-section mt-5">
+		<h2 class="news-title">ausfüllen und absenden</h2>
+	</div>
+	<div class="mt-3 p-0-15">
+		<form action="" method="POST" class="kontakt-form">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email (required)</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Bitte hier Ihre E-Mail eintragen">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputText1">Vorname</label>
+				<input type="text" class="form-control" id="exampleInputText1" placeholder="">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputText2">Nachname</label>
+				<input type="text" class="form-control" id="exampleInputText2" placeholder="">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputText2">Dropdown question?</label>
+				<select class="form-control form-control-sm p-0">
+					<option>Select...</option>
+				</select>
+			</div>
+			<p class="text-center">
+				<button type="submit" class="form-submit pointer">Send</button>
+			</p>
+		</form>
+	</div>
+</section>
+{% endblock content %}

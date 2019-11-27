@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	{% page_attribute "page_title" %} | Title Dropdown
+</span>
+<section>
+	<div class="team-section mt-5">
+		<h2 class="news-title">Team</h2>
+	</div>
+
+	<div class="team-search p-0-15 mt-3">
+		<div class="location-filter pointer dropdown-list">
+			<ul class="p-0 m-0">
+				<li class="list-item all selected"><i class="fa fa-angle-down" aria-hidden="true"></i>Abteilung auswählen</li>
+				<li data-toggle="geschäftsinhaber">Geschäftsinhaber</li>
+				<li data-toggle="geschäftsleitung">Geschäftsleitung</li>
+				<li data-toggle="bauführer-tiefbau">Bauführer Tiefbau</li>
+			</ul>
+		</div>
+		<div class="search-result">
+			<div data-id="geschäftsinhaber" class="post-result post">
+				{% static_placeholder 'geschaftsinhaber post' %}
+				<div class="row">
+					<div class="col col-12">
+						<h4>Anton Borer</h4>
+						<h4>Firmeninhaber</h4>
+						<img src="/media/filer_public_thumbnails/filer_public/c7/42/c74257e9-8b98-478e-b8d0-23a5ffe60028/antonborer-300x154.png__300x154_q85_subsampling-2.png" alt="" class="img-fluid">
+						<div class="container-fluid">
+							<p>Verwaltungsratspräsident<br>
+								Delegierter des Verwaltungsrates</p>
+							<p>Telefon&nbsp; &nbsp;061 789 90 10<br>
+								Telefax&nbsp; &nbsp;061 789 90 11<br>
+								E-Mail</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-id="geschäftsleitung" class="post-result post">
+				{% static_placeholder 'Geschaftsleitung post' %}
+			</div>
+			<div data-id="bauführer-tiefbau" class="post-result post">
+				{% static_placeholder 'Baufuhrer Tiefbau post' %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

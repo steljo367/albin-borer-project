@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	{% page_attribute "page_title" %} | Title Dropdown
+</span>
+<section>
+	<div class="job-section mt-5">
+		<h2 class="news-title">Lohn abholen</h2>
+	</div>
+
+	<div class="job-search p-0-15 mt-3">
+		<div class="jobs-search pointer dropdown-list">
+			<ul class="p-0 m-0">
+				<li class="list-item all selected"><i class="fa fa-angle-down" aria-hidden="true"></i>Abteilung auswählen</li>
+				<li data-toggle="lehrstellen">Lehrstellen</li>
+			</ul>
+		</div>
+		<div class="search-result">
+			<div data-id="lehrstellen" class="post-result post">
+				{% static_placeholder 'lehrstellen post' %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

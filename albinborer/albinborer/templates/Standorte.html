@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles static i18n cms_tags sekizai_tags cms_tags %}
+
+{% block content %}
+
+<span class='entry-sub-title'>
+	{% page_attribute "page_title" %} | Title Dropdown
+</span>
+<section>
+	<div class="standorte-section mt-5">
+		<h2 class="news-title">abheben und anrufen</h2>
+	</div>
+
+	<div class="standorte-search p-0-15 mt-3">
+		<div class="area-filter pointer dropdown-list">
+			<ul class="p-0 m-0">
+				<li class="list-item all selected"><i class="fa fa-angle-down" aria-hidden="true"></i>Erschwil (SO)</li>
+				<li data-toggle="allestandorte">Alle Standorte</li>
+				<li data-toggle="erschwil(SO)">Erschwil (SO)</li>
+			</ul>
+		</div>
+		<div class="search-result">
+			<div data-id="allestandorte" class="post-result post">
+				{% static_placeholder 'allestandorte post' %}
+			</div>
+			<div data-id="erschwil(SO)" class="post-result post">
+				{% static_placeholder 'erschwil(SO) post' %}
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

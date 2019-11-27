@@ -1,0 +1,69 @@
+{% load cms_tags menu_tags sekizai_tags staticfiles static i18n %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% page_attribute "page_title" %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+		<!--BOOTSTRAP-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+        {% render_block "css" %}
+    </head>
+    <body class='{% page_attribute "page_title" %}'>
+        {% cms_toolbar %}
+
+		<header class="w-100">
+			{% load menu_tags %}
+			<span class="navbar mobile-nav-icon float-right pointer">
+				<span class="navbar-toggler" data-toggle="collapse" data-target="#mobile-menu"
+					  aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+					<img id="nav-icon" src="{% static 'images/hamburger-icon.png' %}" alt="" />
+				</span>
+			</span>
+			<div class="logo float-left cursor">
+				<!--{% static_placeholder 'logo' %}-->
+			</div>
+			<ul class="nav desktop-nav navbar-nav text-uppercase float-left">
+				{% show_menu 0 100 100 100 %}
+			</ul>
+			<div class="collapse navbar-collapse float-left w-100" id="mobile-menu">
+				<ul class="navbar-nav mr-auto">
+					{% show_menu 0 100 100 100 "menu.html" %}
+				</ul>
+			</div>
+			<div class='mobile-nav-logo pointer'>
+				{% static_placeholder 'logo' %}
+			</div>
+			<div class='header-nav-logo pointer'>
+				{% static_placeholder 'logo' %}
+			</div>
+			<span class='entry-title'>
+				{% page_attribute "page_title" %}
+			</span>
+		</header>
+
+		{% block content %}{% endblock content %}
+		
+		<footer>
+			<div class="w-100 footer-section">
+				<img class='address' src="{% static 'images/footer-top.png' %}" alt="" />
+				<img class="w-100" src="{% static 'images/Footer.png' %}" alt="" />
+			</div>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+		<script src="{% static 'js/custom.js' %}"></script>
+		
+        {% render_block "js" %}
+	</body>
+</html>
